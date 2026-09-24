@@ -17,7 +17,7 @@ const TodaysPlanButton = ({ workout }: TodaysPlanButtonProps) => {
   
 
     const isAlreadyInPlan = readLibrary?.some(
-      (item: TLibrary) => (item._id || item.id) === (workout._id || workout.id)
+      (item: TLibrary) => item.id === workout.id
     );
 
   
