@@ -2,12 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, Calendar, Bookmark } from "lucide-react";
 import { TLibrary } from "@/types/library.type";
+import TodaysPlanButton from "@/components/libraryDetails/TodaysPlanButton";
+import SaveForLateButton from "@/components/libraryDetails/SaveForLateButton";
 
 interface PageProps {
   params: Promise<{ id: string }>;
 }
 
-// Single Workout Fetching Function
 const getSingleWorkout = async (id: string): Promise<TLibrary | null> => {
   try {
     const res = await fetch(`https://api.abcz.workers.dev/api/fitlog/${id}`, {
@@ -46,7 +47,8 @@ const LibraryDetailsPage = async ({ params }: PageProps) => {
   return (
     <div className="min-h-screen bg-[#0b0f17] py-8 text-white font-sans">
       <div className="container mx-auto max-w-4xl px-4">
-        {/* Back Button */}
+        
+
         <Link
           href="/"
           className="mb-5 inline-flex items-center gap-2 text-xs font-semibold text-gray-400 hover:text-[#C2F800] transition-colors"
@@ -54,10 +56,11 @@ const LibraryDetailsPage = async ({ params }: PageProps) => {
           <ArrowLeft className="h-3.5 w-3.5" /> Back to Library
         </Link>
 
-        {/* Main Grid Container */}
+       
+       
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch bg-[#0d1420] p-6 rounded-3xl border border-white/5">
           
-          {/* Left Column: Image Container (Full height stretch) */}
+          
           <div className="md:col-span-5 relative w-full h-full min-h-[350px] rounded-2xl overflow-hidden bg-slate-900 border border-white/5">
             <Image
               src={workout.image}
@@ -69,10 +72,10 @@ const LibraryDetailsPage = async ({ params }: PageProps) => {
             />
           </div>
 
-          {/* Right Column: Workout Details */}
+         
           <div className="md:col-span-7 flex flex-col justify-between space-y-4">
             
-            {/* Title & Description */}
+          
             <div>
               <h1 className="text-2xl sm:text-3xl font-black uppercase tracking-tight text-white">
                 {workout.name}
@@ -81,7 +84,7 @@ const LibraryDetailsPage = async ({ params }: PageProps) => {
                 {workout.description}
               </p>
 
-              {/* Muscle Groups Badges */}
+           
               <div className="flex flex-wrap gap-1.5 mt-3">
                 {workout.muscleGroups?.map((group) => (
                   <span
@@ -94,7 +97,7 @@ const LibraryDetailsPage = async ({ params }: PageProps) => {
               </div>
             </div>
 
-            {/* Info Table */}
+        
             <div className="rounded-xl bg-[#121824] border border-white/5 p-3.5 space-y-2 text-xs text-gray-300">
               <div className="flex justify-between items-center">
                 <span className="text-[10px] uppercase font-bold text-gray-400">Equipment</span>
@@ -138,7 +141,7 @@ const LibraryDetailsPage = async ({ params }: PageProps) => {
               </div>
             </div>
 
-            {/* Instructions */}
+          
             {workout.instructions && workout.instructions.length > 0 && (
               <div>
                 <h3 className="text-xs font-bold uppercase tracking-wider text-white mb-2">
@@ -155,15 +158,13 @@ const LibraryDetailsPage = async ({ params }: PageProps) => {
               </div>
             )}
 
-            {/* Action Buttons */}
             <div className="flex gap-2 pt-1">
-              <button className="flex-1 inline-flex items-center justify-center gap-2 bg-[#C2F800] hover:bg-[#b0e000] text-black font-extrabold py-2.5 px-4 rounded-xl transition-all active:scale-95 text-xs uppercase tracking-wider">
-                <Calendar className="h-3.5 w-3.5" /> Add to today&apos;s plan
-              </button>
+
+            <TodaysPlanButton workout={workout}/>
+
+            <SaveForLateButton workout ={workout}/>
               
-              <button className="inline-flex items-center justify-center gap-1.5 bg-transparent hover:bg-white/5 text-gray-300 border border-white/10 font-bold py-2.5 px-4 rounded-xl transition-all active:scale-95 text-xs">
-                <Bookmark className="h-3.5 w-3.5" /> Save for later
-              </button>
+              
             </div>
 
           </div>

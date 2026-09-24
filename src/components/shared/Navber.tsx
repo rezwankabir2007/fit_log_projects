@@ -6,7 +6,7 @@ const NavLinks = () => (
   <>
     <li>
       <Link 
-        href="/workouts" 
+        href="/" 
         className="text-[#C2F800] font-semibold text-lg lg:text-xl p-2"
       >
         Workouts
@@ -14,7 +14,7 @@ const NavLinks = () => (
     </li>
     <li>
       <Link 
-        href="/myPlan" 
+        href="/myplan" 
         className="text-[#9CA3AF] font-semibold text-lg lg:text-xl p-2"
       >
         My Plan
@@ -28,7 +28,6 @@ const Navbar = () => {
     <div className="container mx-auto px-2 sm:px-4">
       <div className="navbar bg-base-100 shadow-sm">
         
-     
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -51,25 +50,24 @@ const Navbar = () => {
             </ul>
           </div>
 
-       
           <Link href="/" className="flex items-center gap-2 btn btn-ghost normal-case text-xl">
             <Image src={NavbarLogo} alt="Navbar Logo" width={40} height={40} className="w-8 h-8 sm:w-10 sm:h-10 object-contain" />
             <span className="text-white font-bold text-xl sm:text-2xl">FIRLOG</span>
           </Link>
         </div>
 
-        
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 gap-2">
             <NavLinks />
           </ul>
         </div>
 
-       
         <div className="navbar-end gap-1 sm:gap-2">
-          <Link href="/myPlan" className="btn btn-sm sm:btn-md text-[#D1D5DB]">Plan</Link>
+       
+       
+          <Link href="/myplan" className="btn btn-sm sm:btn-md text-[#D1D5DB]">Plan</Link>
           
-          <Link href="/myPlan" className="btn btn-sm sm:btn-md text-[#9CA3AF]">Saved</Link>
+          <Link href="/myplan" className="btn btn-sm sm:btn-md text-[#9CA3AF]">Saved</Link>
         </div>
 
       </div>
