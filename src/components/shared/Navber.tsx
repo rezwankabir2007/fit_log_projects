@@ -67,8 +67,9 @@ const Navbar = () => {
 
        
         <div className="navbar-end gap-1 sm:gap-2">
-          <a className="btn btn-sm sm:btn-md text-[#D1D5DB]">Plan</a>
-          <a className="btn btn-sm sm:btn-md text-[#9CA3AF]">Saved</a>
+          <Link href="/myPlan" className="btn btn-sm sm:btn-md text-[#D1D5DB]">Plan</Link>
+          
+          <Link href="/myPlan" className="btn btn-sm sm:btn-md text-[#9CA3AF]">Saved</Link>
         </div>
 
       </div>
