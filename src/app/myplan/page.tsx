@@ -15,20 +15,20 @@ const MyPlanPage = () => {
   };
 
 
-
+  
   const [activeTab, setActiveTab] = useState<'plan' | 'saved'>('plan');
+  
 
 
-
-
+  
   const [sortBy, setSortBy] = useState<string>('default');
 
-
-
+ 
+  
   const baseList: TLibrary[] = activeTab === 'plan' ? readLibrary || [] : wishlibrary || [];
 
 
-
+  
   const currentList = [...baseList].sort((a, b) => {
     if (sortBy === 'duration') return (Number(b.duration) || 0) - (Number(a.duration) || 0);
     if (sortBy === 'calories') return (Number(b.caloriesBurned) || 0) - (Number(a.caloriesBurned) || 0);
@@ -37,13 +37,13 @@ const MyPlanPage = () => {
   });
 
 
-
+  
   const totalExercises = currentList.length;
   const totalMinutes = currentList.reduce((sum, item) => sum + (Number(item.duration) || 0), 0);
   const totalCalories = currentList.reduce((sum, item) => sum + (Number(item.caloriesBurned) || 0), 0);
 
-
-
+  
+  
   const handleRemove = (id: string | number, isSavedTab = false) => {
     if (isSavedTab) {
       setWishLibrary(wishlibrary.filter((item: TLibrary) => String(item.id) !== String(id)));
@@ -54,8 +54,8 @@ const MyPlanPage = () => {
 
   return (
     <div className="container mx-auto px-4 py-8 max-w-5xl text-white">
-
-
+    
+    
       <h1 className="text-3xl font-black uppercase tracking-tight">MY PLAN</h1>
       <p className="text-[#8A92A0] text-sm mt-1 mb-6">
         Cap of five lifts for today. Finish them, then load more.
@@ -80,9 +80,9 @@ const MyPlanPage = () => {
 
 
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 border-b border-white/10 pb-2">
-
-
-
+        
+       
+       
         <div className="tabs tabs-border">
           <input
             type="radio"
@@ -102,8 +102,8 @@ const MyPlanPage = () => {
           />
         </div>
 
-
-
+        
+        
         <div className="flex items-center gap-2 self-end sm:self-auto">
           <span className="text-xs text-gray-400 font-medium whitespace-nowrap">Sort By</span>
           <select
@@ -111,15 +111,15 @@ const MyPlanPage = () => {
             onChange={(e) => setSortBy(e.target.value)}
             className="select select-sm bg-[#121824] border border-white/10 text-xs text-white rounded-xl focus:outline-none focus:border-[#C2F800]"
           >
-            <option value="default">Default</option>
             <option value="duration">Duration</option>
+            <option value="calories">Calories</option>
             <option value="rating">Rating</option>
           </select>
         </div>
       </div>
 
-
-
+     
+     
       <div className="py-2">
         {currentList && currentList.length > 0 ? (
           <div className="space-y-4">
@@ -128,8 +128,8 @@ const MyPlanPage = () => {
                 key={item.id}
                 className="flex flex-col sm:flex-row items-center justify-between bg-[#121824] p-4 rounded-2xl border border-white/5 gap-4"
               >
-
-
+             
+             
                 <div className="flex items-center gap-4 w-full sm:w-auto">
                   <div className="relative w-20 h-20 rounded-xl overflow-hidden bg-slate-800 flex-shrink-0">
                     <Image
@@ -153,8 +153,8 @@ const MyPlanPage = () => {
                   </div>
                 </div>
 
-
-
+             
+             
                 <div className="flex items-center gap-3 w-full sm:w-auto justify-end">
                   <Link
                     href={`/library/${item.id}`}
@@ -181,7 +181,7 @@ const MyPlanPage = () => {
           </div>
         ) : (
 
-
+          
           <div className="flex flex-col items-center justify-center text-center p-8 gap-3 border border-white/5 rounded-2xl bg-[#121824]">
             <p className="text-white font-bold tracking-wider">
               {activeTab === 'plan' ? 'NOTHING HERE YET' : 'NO SAVED WORKOUTS'}
