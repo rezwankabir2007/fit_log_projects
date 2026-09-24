@@ -28,7 +28,7 @@ const Navbar = () => {
     <div className="container mx-auto px-2 sm:px-4">
       <div className="navbar bg-base-100 shadow-sm">
         
-        {/* Navbar Start (Mobile Menu + Logo) */}
+     
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -51,21 +51,21 @@ const Navbar = () => {
             </ul>
           </div>
 
-          {/* Logo & Brand Title with Home Link */}
+       
           <Link href="/" className="flex items-center gap-2 btn btn-ghost normal-case text-xl">
             <Image src={NavbarLogo} alt="Navbar Logo" width={40} height={40} className="w-8 h-8 sm:w-10 sm:h-10 object-contain" />
             <span className="text-white font-bold text-xl sm:text-2xl">FIRLOG</span>
           </Link>
         </div>
 
-        {/* Navbar Center (Desktop Menu) */}
+        
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 gap-2">
             <NavLinks />
           </ul>
         </div>
 
-        {/* Navbar End (Action Buttons) */}
+       
         <div className="navbar-end gap-1 sm:gap-2">
           <a className="btn btn-sm sm:btn-md text-[#D1D5DB]">Plan</a>
           <a className="btn btn-sm sm:btn-md text-[#9CA3AF]">Saved</a>
