@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navber from "@/components/shared/Navber";
+import Footer from '@/app/Footer/page';
 import LibrarysProvider from "@/context/LibrarysContext";
 import { ToastContainer } from "react-toastify";
 
@@ -34,8 +35,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Navber/>
         
         {children}
+
+        <Footer/>
         
         </LibrarysProvider>
+
+    
+
         <ToastContainer />
         </body>
     </html>

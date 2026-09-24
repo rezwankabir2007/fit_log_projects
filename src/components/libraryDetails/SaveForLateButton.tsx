@@ -17,7 +17,7 @@ const SaveForLateButton = ({ workout }: SaveForLateButtonProps) => {
    
     
     const isAlreadySaved = wishlibrary?.some(
-      (item: TLibrary) => (item._id || item.id) === (workout._id || workout.id)
+      (item: TLibrary) => item.id === workout.id
     );
 
 

@@ -6,13 +6,13 @@ import Link from 'next/link';
 import React, { useContext, JSX } from 'react';
 import { LibrarysContext } from '@/context/LibrarysContext';
 
-// 1. NavLinks Component Type
+
 const NavLinks: React.FC = (): JSX.Element => (
   <>
     <li>
       <Link 
-        href="/library" 
-        className="text-[#C2F800] font-semibold text-base lg:text-lg p-2"
+        href="/" 
+        className=" bg-[#1A2312] rounded-2xl text-[#C2F800]  text-base  font-semibold  lg:text-xl p-3 "
       >
         Workouts
       </Link>
@@ -20,7 +20,7 @@ const NavLinks: React.FC = (): JSX.Element => (
     <li>
       <Link 
         href="/myplan" 
-        className="text-[#9CA3AF] hover:text-white font-semibold text-base lg:text-lg p-2"
+        className="text-[#9CA3AF] hover:text-white font-semibold text-base lg:text-xl p-2"
       >
         My Plan
       </Link>
@@ -78,14 +78,16 @@ const Navbar: React.FC = (): JSX.Element => {
           </Link>
         </div>
 
-        {/* Navbar Center */}
+       
+       
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 gap-2">
             <NavLinks />
           </ul>
         </div>
 
-        {/* Navbar End */}
+      
+      
         <div className="navbar-end gap-3">
           <Link href="/myplan" className="flex items-center gap-1.5 text-xs font-semibold text-[#D1D5DB] hover:text-white transition-colors">
             <span>Plan</span>
