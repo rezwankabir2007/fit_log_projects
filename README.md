@@ -12,7 +12,8 @@ i.Naxt.js
 ii.React
 iii.Tailwind CSS
 iv. daisy UI
-v.
+v.TypeScript 
+vi. JavaScript etc.
 
 
 
