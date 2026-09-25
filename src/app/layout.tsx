@@ -40,8 +40,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         
         </LibrarysProvider>
 
-    
-
         <ToastContainer />
         </body>
     </html>

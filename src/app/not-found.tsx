@@ -43,14 +43,16 @@ export default function NotFound() {
           <span>Error 404 • Lost in Space</span>
         </div>
 
-        {/* Glowing 404 Headline */}
+       
+       
         <h1
           className="mt-6 text-8xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-white via-slate-200 to-slate-500 sm:text-9xl"
         >
           404
         </h1>
 
-        {/* Message */}
+      
+      
         <h2
           className="mt-4 text-2xl font-bold tracking-tight text-white sm:text-3xl"
         >

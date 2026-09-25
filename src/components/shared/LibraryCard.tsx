@@ -16,8 +16,9 @@ const LibraryCard = ({ library }: TLibraryCardProps) => {
             href={`/library/${library.id}`}
             className="group block overflow-hidden rounded-3xl border border-white/10 bg-[#0d1420] shadow-xl shadow-black/20 transition-all duration-300 hover:-translate-y-2 hover:border-cyan-400/40 hover:shadow-cyan-500/10"
           >
-            {/* Image */}
-            <div className="relative h-56 overflow-hidden">
+           
+           
+            <div className="relative h-120 w-auto overflow-hidden">
               <Image
                 src={library.image}
                 alt={library.name}

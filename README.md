@@ -1,36 +1,30 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<!-- Answer the all question now.. -->
 
-## Getting Started
+1. Project name: fit_log_projects
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+2. Short description: A simple and fast website for gym-goers to find workouts, create daily exercise plans, track fitness progress, and save favorite routines. 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Technologies used:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+i.Naxt.js
+ii.React
+iii.Tailwind CSS
+iv. daisy UI
+v.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. Now I writting 5 key features of the project :
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+i. Interactive Workout Library & Dynamic Sorting – Browse multi-category exercises in a responsive 3x4 grid with instant sorting by duration, calories, and rating.
 
-## Deploy on Vercel
+ii. Real-Time Plan & Metric Tracker – Add lifts to "Today's Plan" with live metrics automatically updating your total exercise count, duration, and calories burned.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+iii. Interactive Lift Workflows – Complete sets using the "Mark as Done" feature or remove workouts dynamically with instant UI toast feedback.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+iv. Comprehensive Exercise Detail Views – View complete equipment specs, key intensity metrics for every lift.
+
+v. Persistent State & Active Navbar Badges – Track active "Plan" and "Saved" items via dynamic navbar counter pills that remain saved across page reloads.
+
