@@ -35,18 +35,18 @@ const Navbar: React.FC = (): JSX.Element => {
   const savedCount: number = wishlibrary?.length || 0;
 
   return (
-    <div className="sticky top-0 z-50 bg-base-100/95 backdrop-blur-md">
+  
+    
+    <div className="sticky top-0 z-50 bg-[#0F172A]/95 backdrop-blur-md">
       <div className="container mx-auto px-2 sm:px-4">
-        <div className="navbar bg-base-100/95 shadow-sm">
+        <div className="navbar bg-[#0F172A]/95 shadow-sm">
 
-        
-        
           <div className="navbar-start">
             <div className="dropdown">
               <div
                 tabIndex={0}
                 role="button"
-                className="btn btn-ghost lg:hidden"
+                className="btn btn-ghost lg:hidden text-white"
               >
                 <svg
                   aria-label="Menu"
@@ -65,9 +65,10 @@ const Navbar: React.FC = (): JSX.Element => {
                 </svg>
               </div>
 
+             
               <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-50 mt-3 w-52 p-2 shadow"
+                className="menu menu-sm dropdown-content bg-[#0F172A] rounded-box z-50 mt-3 w-52 p-2 shadow border border-gray-800"
               >
                 <NavLinks />
               </ul>
@@ -91,18 +92,13 @@ const Navbar: React.FC = (): JSX.Element => {
             </Link>
           </div>
 
-        
-        
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1 gap-2">
               <NavLinks />
             </ul>
           </div>
 
-        
-        
           <div className="navbar-end gap-3">
-
             <Link
               href="/myplan"
               className="flex items-center gap-1.5 text-xs font-semibold text-[#D1D5DB] hover:text-white transition-colors"
@@ -124,7 +120,6 @@ const Navbar: React.FC = (): JSX.Element => {
                 {savedCount}
               </span>
             </Link>
-
           </div>
         </div>
       </div>
